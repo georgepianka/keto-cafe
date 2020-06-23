@@ -1,13 +1,13 @@
 import React from 'react';
 import logo from './KetoCafe.jpg';
 import './App.css';
-//import HomePage from './components/homepage.js';
+import HomePage from './components/homepage.js';
 
 
 function App() {
   return (
     <div>
-        {/*<HomePage /> */}
+        <HomePage />
         <img src={logo} className="App-logo" alt="logo" />
     </div>
   );
