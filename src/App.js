@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './KetoCafe.jpg';
 import './App.css';
-import HomePage from './components/homepage.js';
+import HomePage from './containers/homepage.js';
 
 
 function App() {
