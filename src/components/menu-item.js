@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../styles/menu-item.scss';
 
+
 const MenuItem = ({ title, imageUrl, size }) => (
   <div className={`${size} menu-item`}>
     <div
@@ -14,6 +15,7 @@ const MenuItem = ({ title, imageUrl, size }) => (
       <h1 className='title'>{title.toUpperCase()}</h1>
       <span className='subtitle'>SHOP NOW</span>
     </div>
+
   </div>
 );
 
