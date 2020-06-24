@@ -12,28 +12,28 @@ class Directory extends React.Component {
       sections: [
         {
           title: 'meals',
-          imageUrl: '%PUBLIC_URL%/KetoCafe.jpg',
+          imageUrl: 'https://lowcarbyum.com/wp-content/uploads/2012/08/low-carb-zucchini-bread-l.jpg',
           id: 1
         },
         {
           title: 'pastries',
-          imageUrl: '%PUBLIC_URL%/KetoCafe.jpg',
+          imageUrl: 'https://lowcarbyum.com/wp-content/uploads/2012/08/low-carb-zucchini-bread-l.jpg',
           id: 2
         },
         {
           title: 'snacks',
-          imageUrl: '%PUBLIC_URL%/KetoCafe.jpg',
+          imageUrl: 'https://lowcarbyum.com/wp-content/uploads/2012/08/low-carb-zucchini-bread-l.jpg',
           id: 3
         },
         {
           title: 'beverages',
-          imageUrl: '%PUBLIC_URL%/KetoCafe.jpg',
+          imageUrl: 'https://lowcarbyum.com/wp-content/uploads/2012/08/low-carb-zucchini-bread-l.jpg',
           size: 'large',
           id: 4
         },
         {
           title: 'supplements',
-          imageUrl: '%PUBLIC_URL%/KetoCafe.jpg',
+          imageUrl: 'https://lowcarbyum.com/wp-content/uploads/2012/08/low-carb-zucchini-bread-l.jpg',
           size: 'large',
           id: 5
         }
