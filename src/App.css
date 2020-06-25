@@ -1,3 +1,8 @@
+body {
+  font-family: 'Open Sans Condensed';
+}
+
+
 .logo {
   height: 15vmin;
   pointer-events: none;
