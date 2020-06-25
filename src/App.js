@@ -5,16 +5,6 @@ import HomePage from './containers/homepage.js';
 import { Switch, Route } from 'react-router-dom';
 
 
-function App() {
-  return (
-    <div>
-        <img src={logo} className="logo" alt="logo" />
-        <HomePage />
-    </div>
-  );
-}
-
-
 const MealsPage = () => (
   <div>
     <h1>MEALS PAGE </h1>
@@ -24,6 +14,7 @@ const MealsPage = () => (
 function App() {
   return (
     <div>
+      <img src={logo} className="logo" alt="logo" />
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/meals' component={MealsPage} />
