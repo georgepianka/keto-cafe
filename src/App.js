@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './KetoCafe.jpg';
+import logo from './KetoCafe.png';
 import './App.css';
 import HomePage from './containers/homepage.js';
 
