@@ -8,16 +8,6 @@ a {
   color: black;
 }
 
-.logo {
-  height: 15vmin;
-  pointer-events: none;
-  display: block;
-  margin: 15px 87.5px 15px;
-  opacity: .9;
-  /*border: 1px solid black;*/
-}
-
-
 .App-logo {
   height: 25vmin;
   pointer-events: none;
