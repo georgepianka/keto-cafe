@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../KetoCafe.png';
+import logo from '../KetoCafe.png';
 
-import './header.styles.scss';
+import '../styles/header.scss';
 
 const Header = () => (
   <div className='header'>
     <Link className='logo-container' to='/'>
-      <Logo className='logo' />
+      <img src={logo} className="logo" alt="logo" />
     </Link>
     <div className='options'>
       <Link className='option' to='/shop'>
