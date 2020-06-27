@@ -16,13 +16,13 @@
   font-weight: bolder;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
 
 
   &:hover {
-    -webkit-animation: gradient 2s ease infinite;
-	  -moz-animation: gradient 2s ease infinite;
-	animation: gradient 2s ease infinite;
+    -webkit-animation: gradient 3s ease infinite;
+	  -moz-animation: gradient 3s ease infinite;
+	animation: gradient 3s ease infinite;
   }
 }
 
