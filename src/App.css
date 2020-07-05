@@ -8,6 +8,10 @@ a {
   color: black;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .App-logo {
   height: 25vmin;
   pointer-events: none;
