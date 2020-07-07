@@ -3,7 +3,7 @@ import React from 'react';
 import FormInput from './formInput.js';
 import CustomButton from './customButton.js';
 
-import { logInWithGoogle } from '../firebase/firebase.utils.js';
+import {auth, logInWithGoogle } from '../firebase/firebase.utils.js';
 
 import '../styles/log-in.scss';
 

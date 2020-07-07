@@ -27,6 +27,10 @@
   &.google-log-in {
     filter: hue-rotate(25deg);
   }
+
+  &.sign-up {
+    filter: hue-rotate(310deg);
+  }
 }
 
 @keyframes gradient {
