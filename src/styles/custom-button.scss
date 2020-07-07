@@ -1,7 +1,6 @@
 .custom-button {
   background-image: linear-gradient(275deg, rgba(67,206,162,1) 0%, rgba(24,90,157,1) 100%);
   background-size: 250% 250%;
-  position: absolute;
   min-width: 165px;
   width: auto;
   height: 50px;
@@ -23,6 +22,10 @@
     -webkit-animation: gradient 3s ease infinite;
 	  -moz-animation: gradient 3s ease infinite;
 	animation: gradient 3s ease infinite;
+  }
+
+  &.google-log-in {
+    filter: hue-rotate(25deg);
   }
 }
 
