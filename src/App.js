@@ -22,15 +22,15 @@ class App extends React.Component {
   unsubscribeFirebaseAuthStateChange = null;
 
   componentDidMount() {
-    this.unsubscribeFirebaseAuthStateChange = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
+    this.unsubscribeFirebaseAuthStateChange = auth.onAuthStateChanged(async authUserState => {
+      if (authUserState) {
+        const userRef = await createUserProfileDocument(authUserState);
 
-        userRef.onSnapshot(snap => {
+        userRef.onSnapshot(snapShot => {
           this.setState({
             currentUser: {
-              id: snap.id,
-              ...snap.data()
+              id: snapShot.id,
+              ...snapShot.data()
             }
           });
 
@@ -38,7 +38,7 @@ class App extends React.Component {
         });
       }
 
-      this.setState({ currentUser: userAuth });
+      this.setState({ currentUser: authUserState });
     });
   }
 

@@ -24,12 +24,14 @@
 	animation: gradient 3s ease infinite;
   }
 
-  &.google-log-in {
-    filter: hue-rotate(25deg);
+  &.sign-up {
+    filter: hue-rotate(320deg);
+    width: auto;
+    align-items: center;
   }
 
-  &.sign-up {
-    filter: hue-rotate(310deg);
+  &.google-log-in {
+    filter: hue-rotate(50deg);
   }
 }
 
