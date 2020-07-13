@@ -7,7 +7,7 @@ import Shop from './pages/shop.js';
 import Header from './components/header.js';
 import LogInAndSignUp from './pages/logInAndSignUp.js';
 import { auth, createUserProfileDocument  } from './firebase/firebase.utils.js';
-import { setCurrentUser } from './redux/userActions.js';
+import { setCurrentUser } from './redux/user/userActions.js';
 
 
 
