@@ -41,9 +41,8 @@
     border: 1px solid black;
 
     &:hover {
-      background-color: black;
-      color: white;
       border: none;
+      opacity: 100%;
     }
   }
 }
