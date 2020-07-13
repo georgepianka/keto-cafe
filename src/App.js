@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
 import HomePage from './pages/homepage.js';
@@ -18,8 +18,6 @@ const MealsPage = () => (
 );
 
 class App extends React.Component {
-
-  state = { currentUser: null };
 
   unsubscribeFirebaseAuthStateChange = null;
 
@@ -63,7 +61,16 @@ class App extends React.Component {
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={Shop} />
           <Route path='/meals' component={MealsPage} />
-          <Route path='/login' component={LogInAndSignUp} />
+          <Route
+            exact path='/login'
+            render={() =>
+                this.props.currentUser ? (
+                  <Redirect to='/' />
+                ) : (
+                  <LogInAndSignUp />
+                )
+            }
+          />
         </Switch>
       </div>
     );
@@ -72,6 +79,8 @@ class App extends React.Component {
 
 
 export default connect(
-  null,
+  state => ({
+  currentUser: state.user.currentUser
+  }),
   { setCurrentUser }
 )(App);
