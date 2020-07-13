@@ -1,11 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './App.css';
 import HomePage from './pages/homepage.js';
 import Shop from './pages/shop.js';
 import Header from './components/header.js';
 import LogInAndSignUp from './pages/logInAndSignUp.js';
 import { auth, createUserProfileDocument  } from './firebase/firebase.utils.js';
+import { setCurrentUser } from './redux/user.js';
 
 
 
@@ -22,12 +24,14 @@ class App extends React.Component {
   unsubscribeFirebaseAuthStateChange = null;
 
   componentDidMount() {
+    const { setCurrentUser } = this.props;
+
     this.unsubscribeFirebaseAuthStateChange = auth.onAuthStateChanged(async authUserState => {
       if (authUserState) {
         const userRef = await createUserProfileDocument(authUserState);
 
         userRef.onSnapshot(snapShot => {
-         this.setState(
+         setCurrentUser(
           {
             currentUser: {
               id: snapShot.id,
@@ -41,7 +45,7 @@ class App extends React.Component {
         });
       } else {
 
-      this.setState({ currentUser: authUserState });
+      setCurrentUser(authUserState);
     }
     });
   }
@@ -53,7 +57,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header />
 
         <Switch>
           <Route exact path='/' component={HomePage} />
@@ -66,4 +70,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+
+export default connect(
+  null,
+  { setCurrentUser }
+)(App);
