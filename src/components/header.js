@@ -2,17 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import CartIcon from './cartIcon.js';
+import CartDropdown from './cartDropdown.js';
+
 import logo from '../KetoCafe.png';
 
 import { auth } from '../firebase/firebase.utils.js';
 
 import '../styles/header.scss';
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <img src={logo} className="logo" alt="logo" />
     </Link>
+
     <div className='options'>
       <Link className='option' to='/shop'>
         SHOP
@@ -29,12 +33,15 @@ const Header = ({ currentUser }) => (
           LOG IN
         </Link>
       )}
+      <CartIcon />
     </div>
+
+    {hidden ? null : <CartDropdown />}
+
   </div>
 );
 
 export default connect(
-  state => ({
-  currentUser: state.user.currentUser
-  })
-) (Header);
+  ({ user: { currentUser }, cart: { hidden } }) =>
+  ({ currentUser, hidden})
+)(Header);
