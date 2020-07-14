@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import CartIcon from './cartIcon.js';
 import CartDropdown from './cartDropdown.js';
+
+import { selectCartHidden } from '../redux/cart/cartSelectors.js';
+import { selectCurrentUser } from '../redux/user/userSelectors.js';
 
 import logo from '../KetoCafe.png';
 
@@ -41,7 +45,11 @@ const Header = ({ currentUser, hidden }) => (
   </div>
 );
 
+
+
 export default connect(
-  ({ user: { currentUser }, cart: { hidden } }) =>
-  ({ currentUser, hidden})
+  createStructuredSelector({
+    currentUser: selectCurrentUser,
+    hidden: selectCartHidden
+  })
 )(Header);
