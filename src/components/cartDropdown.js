@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CartItem from './cartItem.js';
+import { selectCartItems } from '../redux/cart/cartSelectors.js';
 
 import CustomButton from './customButton.js';
 
@@ -18,7 +19,5 @@ const CartDropdown = ({cartItems}) => (
 );
 
 export default connect(
-  ({ cart: { cartItems } }) => ({
-  cartItems
-  })
+  state => ({cartItems: selectCartItems(state)})
 )(CartDropdown);
