@@ -4,7 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import CheckoutItem from '../components/checkoutItem.js';
 
-import { selectCartItems,selectCartTotal } from '../redux/cart/cartSelectors.js';
+import { selectCartItems, selectCartTotal } from '../redux/cart/cartSelectors.js';
 
 import '../styles/checkout-page.scss';
 
@@ -41,4 +41,4 @@ export default connect(
     cartItems: selectCartItems,
     total: selectCartTotal
   })
-)(CheckoutPage);
+)(Checkout);
