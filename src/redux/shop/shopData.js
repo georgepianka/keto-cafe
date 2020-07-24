@@ -1,5 +1,5 @@
 const SHOP_DATA = [
-  {
+  beverages: {
     id: 1,
     title: 'Beverages',
     routeName: 'beverages',
@@ -36,7 +36,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  snacks: {
     id: 2,
     title: 'Snacks',
     routeName: 'snacks',
@@ -73,7 +73,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  supplements: {
     id: 3,
     title: 'Supplements',
     routeName: 'supplements',
@@ -110,7 +110,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  meals: {
     id: 4,
     title: 'Meals',
     routeName: 'meals',
@@ -147,7 +147,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  pastries: {
     id: 5,
     title: 'Pastries',
     routeName: 'pastries',
