@@ -1,28 +1,15 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
-import SHOP_DATA from '../shopData.js';
+import CategoriesOverview from '../components/categoriesOverview.js';
+import CategoryPage from '../components/category.js';
 
-import CategoryPreview from '../components/categoryPreview.js';
 
-class Shop extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      categories: SHOP_DATA
-    };
-  }
-
-  render() {
-    const { categories } = this.state;
-    return (
-      <div className='shop-page'>
-        {categories.map(({ id, ...otherProps }) => (
-          <CategoryPreview key={id} {...otherProps} />
-        ))}
-      </div>
-    );
-  }
-}
+const ShopPage = ({ match }) => (
+  <div className='shop-page'>
+    <Route exact path={`${match.path}`} component={CategoriesOverview} />
+    <Route path={`${match.path}/:categoryId`} component={CategoryPage} />
+  </div>
+);
 
 export default Shop;
