@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import CategoriesOverview from '../components/categoriesOverview.js';
-import CategoryPage from '../components/category.js';
+import CategoryPage from '../components/categoryPage.js';
 
 
 const Shop = ({ match }) => (

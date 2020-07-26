@@ -5,7 +5,7 @@ import CategoryItem from './categoryItem.js';
 
 import { selectCategory } from '../redux/shop/shopSelectors.js';
 
-import '../styles/category.scss';
+import '../styles/category-page.scss';
 
 const CategoryPage = ({ category }) => {
   const { title, items } = category;
