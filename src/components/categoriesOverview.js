@@ -8,7 +8,7 @@ import { selectCategoriesForPreview } from '../redux/shop/shopSelectors.js';
 
 import '../styles/categories-overview.scss';
 
-const categoriesOverview = ({ categories }) => (
+const CategoriesOverview = ({ categories }) => (
   <div className='categories-overview'>
     {categories.map(({ id, ...otherCategoryProps }) => (
       <CategoryPreview key={id} {...otherCategoryProps} />
@@ -20,4 +20,4 @@ const mapStateToProps = createStructuredSelector({
   categories: selectCategoriesForPreview
 });
 
-export default connect(mapStateToProps)(categoriesOverview);
+export default connect(mapStateToProps)(CategoriesOverview);
